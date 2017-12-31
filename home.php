@@ -1,53 +1,33 @@
+<?php
+// 指定したカテゴリーの ID を取得
+$history_id = get_cat_ID( '遠江の歴史' );
+$tour_id = get_cat_ID( '遠江あるき' );
+$food_id = get_cat_ID( '山食・里食・海食' );
+$goods_id = get_cat_ID( '遠江ものづくり' );
+
+// このカテゴリーの URL を取得
+$history_link = get_category_link( $history_id );
+$tour_link = get_category_link( $tour_id );
+$food_link = get_category_link( $food_id );
+$goods_link = get_category_link( $goods_id );
+?>
+
 <?php get_header(); ?>
 
 <div class="content">
 
-	<?php if ( have_posts() ) :
+  <div class="relative">
+    <div id="main-img"></div>
+    <div id="map-img" class="absolute"></div>
+  </div><!-- .relative -->
 
-		$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-		$total_post_count = wp_count_posts();
-		$published_post_count = $total_post_count->publish;
-		$total_pages = ceil( $published_post_count / $posts_per_page );
-
-		if ( 1 < $paged ) : ?>
-
-			<div class="page-title">
-
-				<h4><?php printf( __( 'Page %s of %s', 'fukasawa' ), $paged, $wp_query->max_num_pages ); ?></h4>
-
-			</div><!-- .page-title -->
-
-			<div class="clear"></div>
-
-		<?php endif; ?>
-
-		<div class="posts" id="posts">
-
-			<?php
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'content', get_post_format() );
-
-			endwhile;
-
-		endif; ?>
-
-	</div><!-- .posts -->
-
-	<?php if ( $wp_query->max_num_pages > 1 ) : ?>
-
-		<div class="archive-nav">
-
-			<?php echo get_next_posts_link( __( 'Older posts', 'fukasawa' ) . ' &rarr;' ); ?>
-
-			<?php echo get_previous_posts_link( '&larr; ' . __( 'Newer posts', 'fukasawa' ) ); ?>
-
-			<div class="clear"></div>
-
-		</div><!-- .archive-nav -->
-
-	<?php endif; ?>
-
+  <div class="article-links absolute-2">
+    <a href="<?php echo esc_url( $history_link ); ?>" class="square_btn">遠江の歴史</span></a><br />
+    <a href="<?php echo esc_url( $tour_link ); ?>" class="square_btn">遠江あるき</a><br />
+    <a href="<?php echo esc_url( $food_link ); ?>" class="square_btn">山食・里食・海食</a><br />
+    <a href="<?php echo esc_url( $goods_link ); ?>" class="square_btn">遠江ものづくり</a>
+  </div>
 </div><!-- .content -->
+
 
 <?php get_footer(); ?>

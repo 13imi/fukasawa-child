@@ -2,17 +2,631 @@
  Theme Name: Fukasawa Child
  Template: fukasawa
 */
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+body {
+    font-family: 'Noto Sans Japanese','Open Sans', Helvetica Neue, Sans-serif;
+    font-weight: 200;
+}
+
+/* -------------------------------------------------------------------------------- */
+/*	0. CSS Reset
+/* -------------------------------------------------------------------------------- */
+
+html, body { margin:0; padding:0;}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, small, strike, sub, sup, li, ol, ul, fieldset, form, label, legend, button, table, caption, tr, th, td {
+	font-weight: 200;
+}
+
+
+/* -------------------------------------------------------------------------------- */
+/*	2.	Structure
+/* -------------------------------------------------------------------------------- */
+
+.content.thin {
+	  width: 100%;
+    margin-top: 0px;
+}
+
 
 /* -------------------------------------------------------------------------------- */
 /*	3. Sidebar
 /* -------------------------------------------------------------------------------- */
-
-
 .blog-title a {
     width: 100%;
-    height: 200px;
+    height: 270px;
     border: none;
 	  border-top: 3px solid #333;
 	  border-bottom: 3px solid #333;
-    padding-top: 40%;
+    padding-top: 110px;
+}
+
+.sidebar {
+    width: 25%;
+}
+
+.sidebar:before {
+    width: 25%;
+}
+
+.square_btn {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 12px 0 10px;
+    margin-bottom: 25px;
+    text-decoration: none;
+    color: #333;
+    width: 100%;
+    transition: .4s;
+}
+
+.square_btn:before{
+   position: absolute;
+   content: '';
+   width: 100%;
+   height: 1px;
+   top:100%;
+   left: 0;
+   border-radius: 1px;
+   background:#333;
+   transition: .2s;
+}
+
+.square_btn:after{
+   position: absolute;
+   content: '';
+   width: 100%;
+   height: 1px;
+   top:0;
+   left: 0;
+   border-radius: 1px;
+   background:#333;
+   transition: .2s;
+}
+
+.square_btn:hover:before {
+    top: -webkit-calc(100% - 3px);
+    top: calc(100% - 3px);
+}
+
+.square_btn:hover:after {
+    top: 3px;
+}
+
+.square_btn:hover {
+    color: #333;
+}
+
+
+/* -------------------------------------------------------------------------------- */
+/*	5. Blog
+/* -------------------------------------------------------------------------------- */
+.featured-media img {
+	display: block;
+	width: 100%;
+	height: 120px;
+}
+
+.single .featured-media img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+
+/* -------------------------------------------------------------------------------- */
+/*	6. Single post
+/* -------------------------------------------------------------------------------- */
+.post-inner {
+	max-width: 85%;
+	width: 100%;
+	padding: 7.5% 0;
+	margin: 0 auto;
+}
+
+
+.post.single .post-title {
+		font-size: 1.25em;
+		margin-bottom: 20px;
+}
+
+
+/* -------------------------------------------------------------------------------- */
+/*	13. Home
+/* -------------------------------------------------------------------------------- */
+
+.wrapper {
+    margin-left: 25%;
+}
+
+.home .wrapper {
+    margin-left: 25%;
+}
+
+.single .wrapper, .page .wrapper {
+    padding: 0 5%;
+}
+
+.home .widgets .textwidget {
+    font-size: 16px;
+}
+
+.content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+.home #main-img {
+    background-image: url("images/Nakatajima01.png");
+    background-position: center center;
+    height: 500px;
+    width: 100%;
+}
+
+.home #map-img {
+    width: 40%;
+    background-image: url("");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+.home .content .relative {
+    position: relative;
+}
+
+.home .content .absolute {
+    position: absolute;
+    top: 400px;
+    left: 70px;
+}
+
+.home .content .absolute-2 {
+    position: absolute;
+    top: 600px;
+    right: 50px;
+    width: 30%;
+}
+
+/* -------------------------------------------------------------------------------- */
+/*	13. Responsive
+/* -------------------------------------------------------------------------------- */
+
+
+@media (max-width: 1200px) {
+
+
+	/* structure */
+
+	.section { padding: 60px 0; }
+
+	.medium-padding { padding: 45px 0; }
+	.small-padding { padding: 30px 0; }
+	.no-padding { padding: 0; }
+
+	/* blog */
+
+	.posts .post-container { width: 50%; }
+
+
+}
+
+
+@media ( max-width: 1000px ) {
+
+
+	/* structure */
+
+	.wrapper { margin-left: 0; }
+
+	.sidebar {
+		width: 100%;
+		padding: 30px 5%;
+		margin: 0;
+		border-bottom: 1px solid #ddd;
+		background: #fff;
+		font-size: 1em;
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+
+	.sidebar:before { content: none; }
+
+	.content,
+	.content.thin {
+		max-width: 90%;
+		margin: 5% auto;
+	}
+
+	/* sidebar */
+
+	.main-menu,
+	.widgets,
+	.credits {
+		display: none;
+	}
+
+	.blog-title { margin-right: 120px; }
+
+	/* mobile menu */
+
+	.mobile-navigation { background: #2d2d2d; }
+
+	.mobile-menu {
+		padding: 7.5% 5%;
+		font-size: 0.8em;
+	}
+
+	.mobile-menu li {
+		display: block;
+		margin-top: 25px;
+		font-weight: 700;
+		line-height: 120%;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		position: relative;
+	}
+
+	.mobile-menu > li:first-child { margin-top: 0; }
+
+	.mobile-menu ul { margin-left: 25px; }
+
+	.mobile-menu a { color: #999; }
+
+	.mobile-menu > .current-menu-item > a,
+	.mobile-menu > .current_page_item > a {
+		color: #fff;
+	}
+
+	.mobile-menu .current-menu-item:before,
+	.mobile-menu .current_page_item:before {
+		content: '\f405';
+		display: block;
+		font: 16px/1 "Genericons";
+		color: #019EBD;
+		position: absolute;
+		left: -19px;
+		top: 2px;
+	}
+
+	.mobile-menu a:hover { color: #fff; }
+
+	/* nav toggle */
+
+	.nav-toggle {
+		display: block;
+		padding: 12px 12px 10px;
+		border-radius: 3px;
+		position: absolute;
+		top: 50%;
+		margin-top: -16px;
+		right: 5%;
+	}
+
+	.nav-toggle .bars {
+		height: 10px;
+		width: 15px;
+		float: right;
+		position: relative;
+		margin-top: -1px;
+	}
+
+	.nav-toggle .bar {
+		width: 15px;
+		height: 2px;
+		background: #767676;
+		border-radius: 2px;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.nav-toggle .bar:nth-child(2) { top: 4px; }
+	.nav-toggle .bar:nth-child(3) { top: 8px; }
+
+	.nav-toggle p {
+		font-size: 13px;
+		line-height: 10px;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: right;
+		color: #767676;
+		float: right;
+		margin-right: 8px;
+		position: relative;
+		top: -1px;
+	}
+
+	.nav-toggle .close { display: none; }
+
+	.nav-toggle:hover { cursor: pointer; }
+
+	.nav-toggle.active { background: #019EBD; }
+	.nav-toggle.active p { color: #fff; }
+
+	.nav-toggle.active .bar { background: #fff; }
+
+	.nav-toggle.active .bar:nth-child(1),
+	.nav-toggle.active .bar:nth-child(3) { top: 4px; }
+
+	.nav-toggle.active .bar:nth-child(2) { opacity: 0; }
+
+	.nav-toggle.active .bar:nth-child(1) {
+		transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+	}
+
+	.nav-toggle.active .bar:nth-child(3) {
+		transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+	}
+
+	.nav-toggle.active .menu { display: none; }
+	.nav-toggle.active .close { display: block; }
+
+
+	/* blog */
+
+	.posts .post-container { width: 50%; }
+
+
+}
+
+
+@media (max-width: 800px) {
+
+
+	/* single post */
+
+	.post-navigation a { height: 10  0px; }
+
+
+}
+
+
+@media (max-width: 600px) {
+
+	/* sidebar */
+
+	.sidebar { padding: 20px 5%; }
+
+	.blog-title a {
+		/* padding: 5px 7px 5px 9px; */
+		font-size: 16px;
+		letter-spacing: 2px;
+	}
+
+	/* blog */
+
+	.posts .post-container {
+		width: 100%;
+		padding: 0;
+	}
+
+	.posts .post-container + .post-container { margin-top: 20px; }
+
+	.load-container { margin-top: 30px; }
+
+	/* single post */
+
+	.post.single .post-inner { padding-top: 30px; }
+
+	.post.single .post-title {
+		font-size: 1.75em;
+		margin-bottom: 20px;
+	}
+
+	body.single-post .content.thin,
+	body.page .content.thin,
+	body.single-attachment .content.thin {
+		margin: 0;
+		max-width: 100%;
+	}
+
+	.post-navigation { padding: 0 3%; }
+
+	/* post content */
+
+	.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 { margin: 40px 0 20px; }
+
+	.post-content h1 { font-size: 1.75em; }
+	.post-content h2 { font-size: 1.5em; }
+	.post-content h3 { font-size: 1.25em; }
+	.post-content h4 { font-size: 1.1em; }
+	.post-content h5 { font-size: 1em; }
+	.post-content h6 { font-size: 0.85em; }
+
+	.post-content blockquote {
+		padding: 0 60px 0 0;
+		margin: 1.5em 0;
+	}
+
+	.post-content blockquote:before {
+		font-size: 48px;
+		width: 56px;
+		height: 56px;
+		top: -2px;
+		right: -11px;
+	}
+
+	.post-content blockquote p {
+		font-size: 1.05em;
+		line-height: 150%;
+	}
+
+	.post-content blockquote cite { font-size: 0.8rem; }
+
+	.post-content hr { margin: 2em 0; }
+
+	.post-content .alignleft,
+	.post-content .alignleft img,
+	.post-content .alignright,
+	.post-content .alignright img {
+		max-width: 100%;
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* comments */
+
+	.comments-title,
+	.comment-reply-title {
+		font-size: 1.25em;
+	}
+
+	#cancel-comment-reply-link { font-size: 0.85rem; }
+
+	.comment-actions .fleft,
+	.comment-actions .fright {
+		float: none;
+	}
+
+	.comment-awaiting-moderation { margin-bottom: 15px; }
+
+	.comments-nav { padding: 18px 0; }
+
+	.comments-nav span { display: none; }
+
+	/* respond */
+
+	.comment-form { margin-top: 30px; }
+
+	.comment-form p { margin-top: 20px; }
+
+	.comment-form p:first-child { margin-top: 0; }
+
+	p.comment-form-author,
+	p.comment-form-email {
+		width: 100%;
+		float: none;
+		margin: 20px 0 0 0;
+	}
+
+	.comment-form textarea { height: 180px; }
+
+	/* pagination */
+
+	.page-title { padding-bottom: 20px; }
+
+	.page-title h4 {
+		font-size: 0.8em;
+		margin: 0;
+	}
+
+
+}
+
+@media (max-width: 500px) {
+
+
+	/* navigation */
+
+	.mobile-menu li { margin-top: 20px; }
+	.mobile-menu ul { margin-left: 20px; }
+
+	.mobile-menu .current-menu-item:before,
+	.mobile-menu .current_page_item:before {
+		left: -16px;
+	}
+
+	/* blog */
+
+	.posts .post { width: 100%; }
+
+	/* single post */
+
+	.post-navigation { padding: 15px; }
+
+	.post-navigation a {
+		max-height: 80px;
+		width: 100%;
+		margin: 0;
+		float: none !important;
+	}
+
+	.post-navigation a + a { margin-top: 15px; }
+
+	.post-meta-bottom ul li {
+		float: none;
+		display: block;
+		margin: 0;
+	}
+
+	.post-meta-bottom ul li + li { margin-top: 8px; }
+
+	/* post formats */
+
+	.post.single .flex-direction-nav { margin-top: -16px; }
+
+	.post.single .flex-direction-nav a {
+p		width: 32px;
+		height: 32px;
+	}
+
+	.post.single .flex-direction-nav li:nth-child(1) a { margin-left: -32px; }
+	.post.single .flex-direction-nav li:nth-child(2) a { margin-right: -32px; }
+
+	.post.single .flexslider:hover .flex-direction-nav a {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	/* post content */
+
+	.post-content fieldset { padding: 15px; }
+
+	/* pagination */
+
+	.archive-nav { margin: 30px 0 25px; }
+
+
+}
+
+/* -------------------------------------------------------------------------------- */
+/*	13. Responsive(Home)
+/* -------------------------------------------------------------------------------- */
+
+
+@media ( max-width: 1200px ) {
+}
+
+@media ( max-width: 1000px ) {
+    .home #main-img {
+        height: 300px;
+    }
+
+    .home #map-img {
+        width: 60%;
+    }
+
+    .home .content .absolute {
+        top: 200px;
+        left: 20px;
+    }
+
+
+	  .home .wrapper { margin-left: 0; }
+
+    .blog-title a {
+        width: 100%;
+        height: 60px;
+        padding-top: 15px;
+    }
+}
+
+@media ( max-width: 800px ) {
+}
+
+@media ( max-width: 600px ) {
+  .home #map-img {
+    width: 60%;
+  }
+
 }
