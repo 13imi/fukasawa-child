@@ -30,13 +30,12 @@ register_sidebar( array(
     'after_widget' 	=> '</div><div class="clear"></div></div>',
 ) );
 
-// Sidebar
 register_sidebar( array(
-    'name' => __( 'Home', 'twentytwelve' ),
+    'name' => __( 'Sidebar2', 'twentytwelve' ),
     'id' => 'sidebar-2',
     'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'twentytwelve' ),
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget' => '</aside>',
-    'before_title' => '<h3 class="widget-title">',
-    'after_title' => '</h3>',
+    'before_title' 	=> '<h3 class="widget-title">',
+    'after_title' 	=> '</h3>',
+    'before_widget' => '<div class="widget %2$s"><div class="widget-content">',
+    'after_widget' 	=> '</div><div class="clear"></div></div>',
 ) );

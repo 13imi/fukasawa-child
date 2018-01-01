@@ -19,14 +19,15 @@ $goods_link = get_category_link( $goods_id );
   <div class="relative">
     <div id="main-img"></div>
     <div id="map-img" class="absolute"></div>
+
+    <div class="article-links absolute-2">
+      <a href="<?php echo esc_url( $history_link ); ?>" class="square_btn">遠江の歴史</a><br />
+      <a href="<?php echo esc_url( $tour_link ); ?>" class="square_btn">遠江あるき</a><br />
+      <a href="<?php echo esc_url( $food_link ); ?>" class="square_btn">山食・里食・海食</a><br />
+      <a href="<?php echo esc_url( $goods_link ); ?>" class="square_btn">遠江ものづくり</a>
+    </div>
   </div><!-- .relative -->
 
-  <div class="article-links absolute-2">
-    <a href="<?php echo esc_url( $history_link ); ?>" class="square_btn">遠江の歴史</span></a><br />
-    <a href="<?php echo esc_url( $tour_link ); ?>" class="square_btn">遠江あるき</a><br />
-    <a href="<?php echo esc_url( $food_link ); ?>" class="square_btn">山食・里食・海食</a><br />
-    <a href="<?php echo esc_url( $goods_link ); ?>" class="square_btn">遠江ものづくり</a>
-  </div>
 </div><!-- .content -->
 
 

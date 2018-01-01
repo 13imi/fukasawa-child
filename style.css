@@ -26,7 +26,18 @@ h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, 
 
 .content.thin {
 	  width: 100%;
-    margin-top: 0px;
+    margin-top: 20px;
+}
+
+.post-content input[type="email"] {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 0.9em;
+    border: none;
+    color: #333;
+    background: #f2f2f2;
+    border-radius: 3px;
+    -webkit-appearance: none;
 }
 
 
@@ -35,19 +46,19 @@ h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, 
 /* -------------------------------------------------------------------------------- */
 .blog-title a {
     width: 100%;
-    height: 270px;
+    height: 200px;
     border: none;
 	  border-top: 3px solid #333;
 	  border-bottom: 3px solid #333;
-    padding-top: 110px;
+    padding-top: 80px;
 }
 
 .sidebar {
-    width: 25%;
+    width: 280px;
 }
 
 .sidebar:before {
-    width: 25%;
+    width: 280px;
 }
 
 .square_btn {
@@ -138,19 +149,23 @@ h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, 
 /* -------------------------------------------------------------------------------- */
 
 .wrapper {
-    margin-left: 25%;
+    margin-left: 280px;
 }
 
 .home .wrapper {
-    margin-left: 25%;
+    margin-left: 280px;
 }
 
 .single .wrapper, .page .wrapper {
     padding: 0 5%;
 }
 
-.home .widgets .textwidget {
+.widgets .textwidget {
     font-size: 16px;
+}
+
+.widget-content p {
+    line-height: 200%;
 }
 
 .content {
@@ -162,7 +177,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, 
 .home #main-img {
     background-image: url("images/Nakatajima01.png");
     background-position: center center;
-    height: 500px;
+    height: 600px;
     width: 100%;
 }
 
@@ -186,7 +201,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, 
 
 .home .content .absolute-2 {
     position: absolute;
-    top: 600px;
+    top: 650px;
     right: 50px;
     width: 30%;
 }
@@ -598,6 +613,12 @@ p		width: 32px;
 }
 
 @media ( max-width: 1000px ) {
+
+    .home .content, .content.thin {
+        max-width: 100%;
+        margin: auto;
+    }
+
     .home #main-img {
         height: 300px;
     }
@@ -611,8 +632,16 @@ p		width: 32px;
         left: 20px;
     }
 
+    .home .content .absolute-2 {
+        top: 350px;
+        right: 50px;
+    }
 
 	  .home .wrapper { margin-left: 0; }
+
+    .single .wrapper, .page .wrapper {
+        padding: 0;
+    }
 
     .blog-title a {
         width: 100%;
