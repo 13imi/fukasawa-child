@@ -19,8 +19,26 @@ $goods_link = get_category_link( $goods_id );
     <div id="main-img"></div>
     <div id="map-img" class="absolute"></div>
 
-    <div class="article-links absolute-2">
+    <div class="main-catch vissible-sp">
+    </div>
+
+    <div class="catch vissible-sp">
+      <p class="main">
+        心を取り戻す 癒しの國 遠江
+      </p>
+      <p class="sub">
+        現在の静岡県西部地方を指す言葉、<strong>遠江（とおとうみ）</strong>。<strong>遠州（えんしゅう）</strong>とも呼ばれます。遠江には、<strong>海・山・里</strong>…すべてがあり、地域独特の歴史・文化があります。ここにしかいない人。そこにしかない体験。遠江に生きる人間が、遠江の魅力を伝える。それが<strong>「とおとうみプロジェクト」</strong>です。
+      </p>
       <div class="click-arrow">
+        <a href="#article-links">
+          <img src="<?php bloginfo('stylesheet_directory'); ?>/images/Arrow01.png" class="menu-arrow" alt="" />
+        </a>
+      </div>
+    </div>
+
+
+      <div class="article-links absolute-2" id="article-links">
+      <div class="click-arrow hidden-sp">
         <img src="<?php bloginfo('stylesheet_directory'); ?>/images/Click01.png" class="" alt="" />
         <img src="<?php bloginfo('stylesheet_directory'); ?>/images/Arrow01.png" class="menu-arrow" alt="" />
       </div>

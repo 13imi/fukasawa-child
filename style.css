@@ -188,6 +188,21 @@ h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, 
 		margin-bottom: 20px;
 }
 
+/* -------------------------------------------------------------------------------- */
+/*	7. Post content
+/* -------------------------------------------------------------------------------- */
+img.alignleft,
+.alignleft img,
+img.aligncenter,
+.aligncenter img,
+img.alignright,
+.alignright img,
+img.alignnone,
+.alignnone img {
+	border: none;
+}
+
+
 
 /* -------------------------------------------------------------------------------- */
 /*	13. Home
@@ -222,10 +237,10 @@ h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, 
 .home #main-img {
     /* background: #fff; */
     /* background-image: url("images/Nakatajima01.png"); */
-    /* background-position: center center; */
-    /* background-repeat: no-repeat; */
-    /* background-attachment: fixed; */
-    /* background-size: cover; */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 
     width: 100%;
     max-height: none;
@@ -236,11 +251,11 @@ h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, 
 }
 
 .home #map-img {
-    width: 70%;
+    width: 70vw;
     background-image: url("images/Map01.png");
     background-size: contain;
     background-repeat: no-repeat;
-    height: 600px;
+    height: 85vh;
 }
 
 .home .content .relative {
@@ -249,7 +264,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, 
 
 .home .content .absolute {
     position: absolute;
-    top: 230px;
+    top: 100px;
     left: 60px;
 }
 
@@ -683,21 +698,25 @@ p		width: 32px;
     }
 
     .home #main-img {
-        height: 300px;
+        min-height: 25vh;
+        height: 25vh;
     }
 
     .home #map-img {
-        width: 60%;
+        display: none;
+        width: 100vw;
     }
 
     .home .content .absolute {
-        top: 200px;
+        top: 100px;
         left: 20px;
     }
 
     .home .content .absolute-2 {
-        top: 350px;
-        right: 50px;
+        position: static;
+        width: 100%;
+        text-align: center;
+        padding: 30px 50px;
     }
 
 	  .home .wrapper { margin-left: 0; }
@@ -715,14 +734,39 @@ p		width: 32px;
     .sidebar {
         padding: 5px 5%;
     }
+
+    .main-catch {
+        position: absolute;
+        color: white;
+        top: 20px;
+        left: 20%;
+    }
+
+    .catch {
+        background-color: #23282d;
+        padding: 40px 40px 20px 40px;
+        color: #fff;
+    }
+
+    .catch p.main {
+        font-size: 100%;
+        line-height: 28px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .catch p.sub {
+        font-size: 80%;
+        line-height: 28px;
+    }
+
+    .catch .click-arrow {
+        margin-top: 30px;
+    }
 }
 
 @media ( max-width: 800px ) {
 }
 
 @media ( max-width: 600px ) {
-  .home #map-img {
-    width: 60%;
-  }
-
 }
