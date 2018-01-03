@@ -15,16 +15,27 @@ $goods_link = get_category_link( $goods_id );
 <?php get_header(); ?>
 
 <div class="content">
-
   <div class="relative">
     <div id="main-img"></div>
     <div id="map-img" class="absolute"></div>
 
     <div class="article-links absolute-2">
-      <a href="<?php echo esc_url( $history_link ); ?>" class="square_btn">遠江の歴史</a><br />
-      <a href="<?php echo esc_url( $tour_link ); ?>" class="square_btn">遠江あるき</a><br />
-      <a href="<?php echo esc_url( $food_link ); ?>" class="square_btn">山食・里食・海食</a><br />
-      <a href="<?php echo esc_url( $goods_link ); ?>" class="square_btn">遠江ものづくり</a>
+      <div class="click-arrow">
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/Click01.png" class="" alt="" />
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/Arrow01.png" class="menu-arrow" alt="" />
+      </div>
+      <a href="<?php echo esc_url( $history_link ); ?>" class="square_btn">
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/Menu01.png" class="" alt="" />
+      </a><br />
+      <a href="<?php echo esc_url( $tour_link ); ?>" class="square_btn">
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/Menu02.png" class="" alt="" />
+      </a><br />
+      <a href="<?php echo esc_url( $food_link ); ?>" class="square_btn">
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/Menu03.png" class="" alt="" />
+      </a><br />
+      <a href="<?php echo esc_url( $goods_link ); ?>" class="square_btn">
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/Menu04.png" class="" alt="" />
+      </a>
     </div>
   </div><!-- .relative -->
 

@@ -7,7 +7,9 @@
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
 
+      <?php wp_enqueue_script('vegas', get_bloginfo('stylesheet_directory') . '/js/vegas/vegas.min.js', array('jquery')); ?>
 		<?php wp_head(); ?>
+      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/js/vegas/vegas.min.css" type="text/css" />
 
 	</head>
 
@@ -45,6 +47,16 @@
 		</div><!-- .mobile-navigation -->
 
 		<div class="sidebar">
+
+      	<div class="logo">
+      <a class="hidden-sp" href="/">
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/Totoumi02.png" class="img-logo-pc">
+      </a>
+      <a class="vissible-sp" href="/">
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/Totoumi03.png" class="img-logo-sp">
+      </a>
+     </div>
+
 
 			<?php if ( get_theme_mod( 'fukasawa_logo' ) ) : ?>
 

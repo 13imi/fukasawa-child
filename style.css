@@ -13,7 +13,7 @@ body {
 /*	0. CSS Reset
 /* -------------------------------------------------------------------------------- */
 
-html, body { margin:0; padding:0;}
+html, body { margin:0; padding:0; height: 100%}
 
 h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, small, strike, sub, sup, li, ol, ul, fieldset, form, label, legend, button, table, caption, tr, th, td {
 	font-weight: 200;
@@ -40,6 +40,18 @@ h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, 
     -webkit-appearance: none;
 }
 
+.blog-title{
+    display: none;
+}
+
+.hidden-sp {
+    display: block;
+}
+
+.vissible-sp {
+    display: none;
+}
+
 
 /* -------------------------------------------------------------------------------- */
 /*	3. Sidebar
@@ -61,41 +73,46 @@ h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, 
     width: 280px;
 }
 
+.img-logo-sp {
+    width: 250px;
+    padding-top: 5px;
+}
+
 .square_btn {
     position: relative;
     display: inline-block;
     font-weight: bold;
     padding: 12px 0 10px;
-    margin-bottom: 25px;
+    margin-bottom: -10px;
     text-decoration: none;
     color: #333;
     width: 100%;
     transition: .4s;
 }
 
-.square_btn:before{
-   position: absolute;
-   content: '';
-   width: 100%;
-   height: 1px;
-   top:100%;
-   left: 0;
-   border-radius: 1px;
-   background:#333;
-   transition: .2s;
-}
+/* .square_btn:before{ */
+/*    position: absolute; */
+/*    content: ''; */
+/*    width: 100%; */
+/*    height: 1px; */
+/*    top:100%; */
+/*    left: 0; */
+/*    border-radius: 1px; */
+/*    background:#333; */
+/*    transition: .2s; */
+/* } */
 
-.square_btn:after{
-   position: absolute;
-   content: '';
-   width: 100%;
-   height: 1px;
-   top:0;
-   left: 0;
-   border-radius: 1px;
-   background:#333;
-   transition: .2s;
-}
+/* .square_btn:after{ */
+/*    position: absolute; */
+/*    content: ''; */
+/*    width: 100%; */
+/*    height: 1px; */
+/*    top:0; */
+/*    left: 0; */
+/*    border-radius: 1px; */
+/*    background:#333; */
+/*    transition: .2s; */
+/* } */
 
 .square_btn:hover:before {
     top: -webkit-calc(100% - 3px);
@@ -108,6 +125,34 @@ h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, 
 
 .square_btn:hover {
     color: #333;
+}
+
+.square_btn img:hover {
+	transform: scale(1.05);	/*画像の拡大率*/
+	transition-duration: 0.5s;	/*変化に掛かる時間*/
+}
+
+.click-arrow {
+    text-align: center;
+}
+
+.menu-arrow {
+    width: 30px;
+    animation: updown 1.6s ease infinite;
+}
+
+@keyframes updown {
+    0% { transform:translateY(0) }
+    10% { transform:translateY(-2px) }
+    20% { transform:translateY(-4px) }
+    30% { transform:translateY(-6px) }
+    40% { transform:translateY(-8px) }
+    50% { transform:translateY(-10px) }
+    60% { transform:translateY(-8px) }
+    70% { transform:translateY(-6px) }
+    80% { transform:translateY(-4px) }
+    90% { transform:translateY(-2px) }
+    100% { transform:translateY(0) }
 }
 
 
@@ -175,18 +220,27 @@ h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, 
 }
 
 .home #main-img {
-    background-image: url("images/Nakatajima01.png");
-    background-position: center center;
-    height: 600px;
+    /* background: #fff; */
+    /* background-image: url("images/Nakatajima01.png"); */
+    /* background-position: center center; */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+    /* background-size: cover; */
+
     width: 100%;
+    max-height: none;
+    min-height: 625px;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
 }
 
 .home #map-img {
-    width: 40%;
-    background-image: url("");
+    width: 70%;
+    background-image: url("images/Map01.png");
     background-size: contain;
     background-repeat: no-repeat;
-    height: 500px;
+    height: 600px;
 }
 
 .home .content .relative {
@@ -195,15 +249,15 @@ h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, 
 
 .home .content .absolute {
     position: absolute;
-    top: 400px;
-    left: 70px;
+    top: 230px;
+    left: 60px;
 }
 
 .home .content .absolute-2 {
     position: absolute;
-    top: 650px;
+    top: 50px;
     right: 50px;
-    width: 30%;
+    width: 22%;
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -614,6 +668,15 @@ p		width: 32px;
 
 @media ( max-width: 1000px ) {
 
+    .hidden-sp {
+        display: none;
+    }
+
+    .vissible-sp {
+        display: block;
+    }
+
+
     .home .content, .content.thin {
         max-width: 100%;
         margin: auto;
@@ -647,6 +710,10 @@ p		width: 32px;
         width: 100%;
         height: 60px;
         padding-top: 15px;
+    }
+
+    .sidebar {
+        padding: 5px 5%;
     }
 }
 
