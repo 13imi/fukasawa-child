@@ -13,12 +13,33 @@ body {
 /*	0. CSS Reset
 /* -------------------------------------------------------------------------------- */
 
-html, body { margin:0; padding:0; height: 100%}
+html, body { margin:0; padding:0; height: 100%; font-size: 100%}
 
 h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, small, strike, sub, sup, li, ol, ul, fieldset, form, label, legend, button, table, caption, tr, th, td {
 	font-weight: 200;
 }
 
+
+/* -------------------------------------------------------------------------------- */
+/*	1. Document setup
+/* -------------------------------------------------------------------------------- */
+img.icon {
+    border-radius: 50%;
+    margin-bottom: 0px;
+}
+
+.post-content .alignleft.icon {
+    margin-bottom: 0px;
+}
+
+.credits-sp {
+    padding: 15px 0px;
+}
+
+.credits-sp p, .credits-sp p a {
+    text-align: center;
+    color: #999;
+}
 
 /* -------------------------------------------------------------------------------- */
 /*	2.	Structure
@@ -717,6 +738,7 @@ p		width: 32px;
         width: 100%;
         text-align: center;
         padding: 30px 50px;
+        margin-bottom: 30px;
     }
 
 	  .home .wrapper { margin-left: 0; }
@@ -763,10 +785,27 @@ p		width: 32px;
     .catch .click-arrow {
         margin-top: 30px;
     }
+
+    .square_btn {
+        width: 45%;
+        margin: 0px 5px;
+    }
 }
 
 @media ( max-width: 800px ) {
 }
 
 @media ( max-width: 600px ) {
+
+    .posts .post-title { font-size: 1.0em; }
+    .post-excerpt { font-size: 0.9em; }
+
+
+    .post.single .post-title { font-size: 1.0em; }
+    .post-content { font-size: 0.9em; }
+
+    .square_btn {
+        width: 100%;
+        margin: 0;
+    }
 }

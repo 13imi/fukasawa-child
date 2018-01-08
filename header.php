@@ -118,6 +118,7 @@
 
 					<p>&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>">とおとうみプロジェクト</a>.</p>
 
+
 				</div>
 
 				<div class="clear"></div>

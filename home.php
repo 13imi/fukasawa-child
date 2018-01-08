@@ -1,9 +1,9 @@
 <?php
 // 指定したカテゴリーの ID を取得
 $history_id = get_cat_ID( '遠江の歴史' );
-$tour_id = get_cat_ID( '遠江あるき' );
-$food_id = get_cat_ID( '山食・里食・海食' );
-$goods_id = get_cat_ID( '遠江ものづくり' );
+$tour_id = get_cat_ID( '遠江の歩き方' );
+$food_id = get_cat_ID( '海食/里食/山食' );
+$goods_id = get_cat_ID( '遠江の特産物' );
 
 // このカテゴリーの URL を取得
 $history_link = get_category_link( $history_id );
@@ -44,13 +44,13 @@ $goods_link = get_category_link( $goods_id );
       </div>
       <a href="<?php echo esc_url( $history_link ); ?>" class="square_btn">
         <img src="<?php bloginfo('stylesheet_directory'); ?>/images/Menu01.png" class="" alt="" />
-      </a><br />
+      </a>
       <a href="<?php echo esc_url( $tour_link ); ?>" class="square_btn">
         <img src="<?php bloginfo('stylesheet_directory'); ?>/images/Menu02.png" class="" alt="" />
-      </a><br />
+      </a>
       <a href="<?php echo esc_url( $food_link ); ?>" class="square_btn">
         <img src="<?php bloginfo('stylesheet_directory'); ?>/images/Menu03.png" class="" alt="" />
-      </a><br />
+      </a>
       <a href="<?php echo esc_url( $goods_link ); ?>" class="square_btn">
         <img src="<?php bloginfo('stylesheet_directory'); ?>/images/Menu04.png" class="" alt="" />
       </a>
